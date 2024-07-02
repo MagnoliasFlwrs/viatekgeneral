@@ -4,3 +4,363 @@
   box-sizing: border-box;
   transition: .3s ease;
 }
+a {
+  text-decoration: none;
+}
+ul , li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url(./src/fonts/Raleway-Light.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url(./src/fonts/Raleway-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url(./src/fonts/Raleway-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url(./src/fonts/Raleway-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url(./src/fonts/Raleway-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "UZ Sans";
+  src: url(./src/fonts/UZSans-Light.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "UZ Sans";
+  src: url(./src/fonts/UZSans-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "UZ Sans";
+  src: url(./src/fonts/UZSans-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "UZ Sans";
+  src: url(./src/fonts/UZSans-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "UZ Sans";
+  src: url(./src/fonts/UZSans-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Raleway";
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+  transition: 0.3s ease;
+  background-color: #EDF1F2;
+  background-image: url("./src/images/bg.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+
+}
+.content {
+  max-width: calc(1440px + 16px * 2);
+  padding: 0 16px;
+  margin: 0 auto;
+  width: 100%;
+}
+.header  {
+  padding: 30px 0;
+  background: transparent;
+  @media (max-width: 768px) {
+    padding: 20px 0;
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    @media (max-width: 768px) {
+      gap: 15px;
+    }
+    .logo {
+      svg {
+        @media (max-width: 768px) {
+          width: 90px;
+          height: 60px;
+        }
+      }
+    }
+    .contacts {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      @media (max-width: 768px) {
+        gap: 15px;
+      }
+      .animated-text {
+        display: inline-block;
+        color: #232E31;
+        font-family: "UZ Sans";
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%; /* 25px */
+        background: linear-gradient(to right, white 50%, black 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        transition: background-position 1s;
+        background-size: 200% 100%;
+        background-position: -100% 0;
+        &:hover {
+          background-position: 100% 0;
+        }
+        @media (max-width: 768px) {
+          font-size: 20px;
+        }
+        @media (max-width: 450px) {
+          font-size: 16px;
+        }
+      }
+      .watsapp {
+        display: flex;
+        width: 34px;
+        height: 34px;
+        padding: 3px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        background: transparent;
+
+        &:hover {
+          background: #3ADC49;
+          svg {
+            transform: scale(.7);
+            path {
+              fill: #fff;
+            }
+          }
+        }
+      }
+      .tg {
+        display: flex;
+        width: 34px;
+        height: 34px;
+        padding: 3px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        background: transparent;
+
+        &:hover {
+          background: #2AA1DD;
+          svg {
+            transform: scale(.7);
+            path {
+              fill: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.hero-block {
+  position: relative;
+  padding: 30px 0;
+  overflow: hidden;
+  @media (max-width: 1300px) {
+    height: 650px;
+  }
+  @media (max-width: 1024px) {
+    height: fit-content;
+    padding: 30px 0 0;
+  }
+  img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    @media (max-width: 1024px) {
+      position: static;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: bottom right;
+    }
+  }
+  .content  {
+    h1 {
+      font-family: Raleway;
+      font-size: 200px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 100%; /* 200px */
+      background: radial-gradient(106.19% 174.33% at 40.81% 95.17%, #232E31 0%, #493674 40%, #01C2FF 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      @media (max-width: 1300px) {
+        font-size: 140px;
+      }
+      @media (max-width: 1024px) {
+        font-size: 100px;
+      }
+      @media (max-width: 768px) {
+        font-size: 50px;
+      }
+    }
+
+  }
+}
+.variables-block {
+  padding: 100px 0;
+  .content  {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    .tarif-container {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      h2 {
+        color: #232E31;
+        font-family: Raleway;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%; /* 50px */
+      }
+      p {
+        max-width: 564px;
+        color: #232E31;
+        font-family: Raleway;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 30px */
+      }
+      .banner {
+        width: 100%;
+        background: #01C2FF;
+        display: flex;
+        padding: 30px 30px 30px 200px;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+        gap: 20px;
+        position: relative;
+        flex-wrap: wrap;
+        @media (max-width: 1024px) {
+          justify-content: center;
+        }
+        @media (max-width: 768px) {
+          padding: 30px 30px 30px 150px;
+        }
+
+        img {
+          position: absolute;
+          left: 53px;
+          bottom: 0;
+          @media (max-width: 768px) {
+            left: 30px;
+          }
+          @media (max-width: 450px) {
+            left: 15px;
+          }
+        }
+        P {
+          display: inline-block;
+          color: #FFF;
+          text-align: center;
+          font-family: Raleway;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 100%; /* 30px */
+          max-width: 100%;
+          @media (max-width: 1300px) {
+            max-width: 600px;
+          }
+          span {
+            color: #232E31;
+            font-family: Raleway;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 100%;
+          }
+        }
+        button {
+          display: flex;
+          padding: 15px 20px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          border-radius: 5px;
+          background: rgba(255, 255, 255, 0.20);
+          color: #FFF;
+          border: 1px solid rgba(255, 255, 255, 0.20);
+          font-family: Raleway;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 100%; /* 20px */
+          &:hover {
+            border-radius: 20px;
+            border: 1px solid #FFF;
+            background: #FFF;
+            color: #01C2FF;
+          }
+        }
+      }
+      .examples {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 50px;
+        row-gap: 100px;
+      }
+    }
+  }
+}
