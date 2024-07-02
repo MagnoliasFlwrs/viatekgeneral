@@ -83,3 +83,35 @@ animatedLogo.addEventListener('mouseout', () => {
     gradient3.appendChild(animate);
     animate.beginElement();
 });
+
+
+
+
+// callback-modal
+const overlay = document.querySelector('.overlay')
+const showCallbackModalBtns = document.querySelectorAll('.show-callback-modal');
+const closeCallbackModalBtn = document.querySelector('.callback-modal .close-btn');
+const callbackModal = document.querySelector('.callback-modal');
+
+const showCallbackModal = () => {
+    showCallbackModalBtns.forEach(el => {
+        el.addEventListener('click' , (e)=> {
+            e.preventDefault();
+            overlay.classList.add('open');
+            callbackModal.classList.add('active');
+        })
+    })
+}
+const hideCallbackModal = () => {
+    overlay.classList.remove('open');
+    callbackModal.classList.remove('active');
+}
+if (showCallbackModalBtns) {
+    showCallbackModal();
+    closeCallbackModalBtn?.addEventListener('click' , ()=> {
+        hideCallbackModal()
+    })
+    overlay?.addEventListener('click' , ()=> {
+        hideCallbackModal()
+    })
+}

@@ -11,6 +11,54 @@
     <title>Главная</title>
 </head>
 <body>
+<div class="overlay"></div>
+<div class="callback-modal ">
+    <div class="close-row">
+        <div class="close-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#01C2FF"/>
+            </svg>
+        </div>
+    </div>
+    <div class="callback-modal-body">
+        <form>
+            <div class="wrap">
+                <p>Ваше имя <span>*</span></p>
+                <input type="text">
+            </div>
+            <div class="wrap">
+                <p>Ваш телефон <span>*</span></p>
+                <input type="tel" placeholder="+7 (      ) -        -      -   .">
+            </div>
+            <div class="wrap">
+                <p>E-mail</p>
+                <input type="email">
+            </div>
+            <div class="wrap">
+                <p>Комментарий</p>
+                <textarea></textarea>
+            </div>
+            <div class="checkbox-cont">
+                <label class="custom-checkbox">
+                    <input class="hidden-checkbox" type="checkbox">
+                    <span class="checkbox">
+                        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#ffffff" d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+                    </span>
+                    <span>Нажимая кнопку «Отправить», я принимаю соглашение сайта об обработке персональных данных.</span>
+                </label>
+            </div>
+            <div class="wrap">
+                <button type="submit">Заказать</button>
+            </div>
+            <div class="info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+                    <path d="M25.0005 17.1667L18.3338 23.8334L15.0003 20.5M20.0003 5.5L6.66699 12.1667C6.66699 20.822 11.3075 33.0163 20.0003 35.5C28.6932 33.0163 33.3337 20.822 33.3337 12.1667L20.0003 5.5Z" stroke="#01C2FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Мы гарантируем безопасность введенных данных. Они используются только для связи с клиентом и не хранятся на наших серверах</span>
+            </div>
+        </form>
+    </div>
+</div>
 <header class="header">
     <div class="content">
         <a href="#"
@@ -100,9 +148,11 @@
                 <p>Базовое внедрение <span>Битрикс24.CRM</span> включено в решение</p>
                 <button>Подробнее</button>
             </div>
-            <div class="examples">
-                <div class="example">
-                    <div class="image-block">
+        </div>
+        <div class="examples">
+            <div class="example">
+                <div class="image-block">
+                    <div class="img-container">
                         <img src="./src/images/010.png"
                              alt="example-screenshot">
                         <div class="example-info">
@@ -110,21 +160,24 @@
                             заказчиком.
                         </div>
                     </div>
-                    <div class="info-block">
-                        <span class="num">Шаблон 010</span>
-                        <p class="title">Ландшафтные работы</p>
-                        <div class="price">
-                            <span>Стоимость</span>
-                            <p>15 000</p>
-                            <span>рублей</span>
-                        </div>
-                        <div class="txt">В цену входит готовое решение на базе данного шаблона + crm Битрикс24</div>
-                        <a href="#">Демо режим</a>
-                        <button>Заказать сайт</button>
-                    </div>
+
                 </div>
-                <div class="example">
-                    <div class="image-block">
+                <div class="info-block">
+                    <span class="num">Шаблон 010</span>
+                    <p class="title">Ландшафтные работы</p>
+                    <div class="price">
+                        <span>Стоимость</span>
+                        <p>15 000</p>
+                        <span>рублей</span>
+                    </div>
+                    <div class="txt">В цену входит готовое решение на базе данного шаблона + crm Битрикс24</div>
+                    <a href="#">Демо режим</a>
+                    <button class="show-callback-modal">Заказать сайт</button>
+                </div>
+            </div>
+            <div class="example">
+                <div class="image-block">
+                    <div class="img-container">
                         <img src="./src/images/011.png"
                              alt="example-screenshot">
                         <div class="example-info">
@@ -132,21 +185,24 @@
                             заказчиком.
                         </div>
                     </div>
-                    <div class="info-block">
-                        <span class="num">Шаблон 010</span>
-                        <p class="title">Ландшафтные работы</p>
-                        <div class="price">
-                            <span>Стоимость</span>
-                            <p>15 000</p>
-                            <span>рублей</span>
-                        </div>
-                        <div class="txt">В цену входит готовое решение на базе данного шаблона + crm Битрикс24</div>
-                        <a href="#">Демо режим</a>
-                        <button>Заказать сайт</button>
-                    </div>
+
                 </div>
-                <div class="example">
-                    <div class="image-block">
+                <div class="info-block">
+                    <span class="num">Шаблон 010</span>
+                    <p class="title">Ландшафтные работы</p>
+                    <div class="price">
+                        <span>Стоимость</span>
+                        <p>15 000</p>
+                        <span>рублей</span>
+                    </div>
+                    <div class="txt">В цену входит готовое решение на базе данного шаблона + crm Битрикс24</div>
+                    <a href="#">Демо режим</a>
+                    <button class="show-callback-modal">Заказать сайт</button>
+                </div>
+            </div>
+            <div class="example">
+                <div class="image-block">
+                    <div class="img-container">
                         <img src="./src/images/011.png"
                              alt="example-screenshot">
                         <div class="example-info">
@@ -154,21 +210,24 @@
                             заказчиком.
                         </div>
                     </div>
-                    <div class="info-block">
-                        <span class="num">Шаблон 010</span>
-                        <p class="title">Ландшафтные работы</p>
-                        <div class="price">
-                            <span>Стоимость</span>
-                            <p>15 000</p>
-                            <span>рублей</span>
-                        </div>
-                        <div class="txt">В цену входит готовое решение на базе данного шаблона + crm Битрикс24</div>
-                        <a href="#">Демо режим</a>
-                        <button>Заказать сайт</button>
-                    </div>
+
                 </div>
-                <div class="example">
-                    <div class="image-block">
+                <div class="info-block">
+                    <span class="num">Шаблон 010</span>
+                    <p class="title">Ландшафтные работы</p>
+                    <div class="price">
+                        <span>Стоимость</span>
+                        <p>15 000</p>
+                        <span>рублей</span>
+                    </div>
+                    <div class="txt">В цену входит готовое решение на базе данного шаблона + crm Битрикс24</div>
+                    <a href="#">Демо режим</a>
+                    <button class="show-callback-modal">Заказать сайт</button>
+                </div>
+            </div>
+            <div class="example">
+                <div class="image-block">
+                    <div class="img-container">
                         <img src="./src/images/010.png"
                              alt="example-screenshot">
                         <div class="example-info">
@@ -176,18 +235,125 @@
                             заказчиком.
                         </div>
                     </div>
-                    <div class="info-block">
-                        <span class="num">Шаблон 010</span>
-                        <p class="title">Ландшафтные работы</p>
-                        <div class="price">
-                            <span>Стоимость</span>
-                            <p>15 000</p>
-                            <span>рублей</span>
-                        </div>
-                        <div class="txt">В цену входит готовое решение на базе данного шаблона + crm Битрикс24</div>
-                        <a href="#">Демо режим</a>
-                        <button>Заказать сайт</button>
+
+                </div>
+                <div class="info-block">
+                    <span class="num">Шаблон 010</span>
+                    <p class="title">Ландшафтные работы</p>
+                    <div class="price">
+                        <span>Стоимость</span>
+                        <p>15 000</p>
+                        <span>рублей</span>
                     </div>
+                    <div class="txt">В цену входит готовое решение на базе данного шаблона + crm Битрикс24</div>
+                    <a href="#">Демо режим</a>
+                    <button class="show-callback-modal">Заказать сайт</button>
+                </div>
+            </div>
+        </div>
+        <div class="tarif-container">
+            <h2>Тариф “Бизнес”</h2>
+            <p>Для более опытных и серьезных компаний, которым необходимо развитие и требуются продажи.</p>
+        </div>
+        <div class="examples">
+            <div class="example">
+                <div class="image-block">
+                    <div class="img-container">
+                        <img src="./src/images/010.png"
+                             alt="example-screenshot">
+                        <div class="example-info">
+                            <span>Реализуется на CMS:</span> Wordpress, 1С-Битрикс, MODx, другие CMS по согласованию с
+                            заказчиком.
+                        </div>
+                    </div>
+
+                </div>
+                <div class="info-block">
+                    <span class="num">Шаблон 010</span>
+                    <p class="title">Ландшафтные работы</p>
+                    <div class="price">
+                        <span>Стоимость</span>
+                        <p>15 000</p>
+                        <span>рублей</span>
+                    </div>
+                    <div class="txt">В цену входит готовое решение на базе данного шаблона + crm Битрикс24</div>
+                    <a href="#">Демо режим</a>
+                    <button class="show-callback-modal">Заказать сайт</button>
+                </div>
+            </div>
+            <div class="example">
+                <div class="image-block">
+                    <div class="img-container">
+                        <img src="./src/images/011.png"
+                             alt="example-screenshot">
+                        <div class="example-info">
+                            <span>Реализуется на CMS:</span> Wordpress, 1С-Битрикс, MODx, другие CMS по согласованию с
+                            заказчиком.
+                        </div>
+                    </div>
+
+                </div>
+                <div class="info-block">
+                    <span class="num">Шаблон 010</span>
+                    <p class="title">Ландшафтные работы</p>
+                    <div class="price">
+                        <span>Стоимость</span>
+                        <p>15 000</p>
+                        <span>рублей</span>
+                    </div>
+                    <div class="txt">В цену входит готовое решение на базе данного шаблона + crm Битрикс24</div>
+                    <a href="#">Демо режим</a>
+                    <button class="show-callback-modal">Заказать сайт</button>
+                </div>
+            </div>
+            <div class="example">
+                <div class="image-block">
+                    <div class="img-container">
+                        <img src="./src/images/011.png"
+                             alt="example-screenshot">
+                        <div class="example-info">
+                            <span>Реализуется на CMS:</span> Wordpress, 1С-Битрикс, MODx, другие CMS по согласованию с
+                            заказчиком.
+                        </div>
+                    </div>
+
+                </div>
+                <div class="info-block">
+                    <span class="num">Шаблон 010</span>
+                    <p class="title">Ландшафтные работы</p>
+                    <div class="price">
+                        <span>Стоимость</span>
+                        <p>15 000</p>
+                        <span>рублей</span>
+                    </div>
+                    <div class="txt">В цену входит готовое решение на базе данного шаблона + crm Битрикс24</div>
+                    <a href="#">Демо режим</a>
+                    <button class="show-callback-modal">Заказать сайт</button>
+                </div>
+            </div>
+            <div class="example">
+                <div class="image-block">
+                    <div class="img-container">
+                        <img src="./src/images/010.png"
+                             alt="example-screenshot">
+                        <div class="example-info">
+                            <span>Реализуется на CMS:</span> Wordpress, 1С-Битрикс, MODx, другие CMS по согласованию с
+                            заказчиком.
+                        </div>
+                    </div>
+
+                </div>
+                <div class="info-block">
+                    <span class="num">Шаблон 010</span>
+                    <p class="title">Ландшафтные работы</p>
+                    <div class="price">
+                        <span>Стоимость</span>
+                        <p>15 000</p>
+                        <span>рублей</span>
+                    </div>
+                    <div class="txt">В цену входит готовое решение на базе данного шаблона + crm Битрикс24</div>
+                    <a href="#">Демо режим</a>
+                    <button class="show-callback-modal">Заказать сайт</button>
                 </div>
             </div>
         </div>
