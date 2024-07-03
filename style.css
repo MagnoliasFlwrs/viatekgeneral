@@ -406,10 +406,10 @@ body {
   color: transparent;
   transition: background-position 1s;
   background-size: 200% 100%;
-  background-position: -100% 0;
+  background-position: 100% 0;
 }
 .header .content .contacts .animated-text:hover {
-  background-position: 100% 0;
+  background-position: 0 0;
 }
 @media (max-width: 768px) {
   .header .content .contacts .animated-text {
@@ -671,6 +671,7 @@ body {
 .variables-block .content .examples .example:hover .image-block .img-container {
   background: #FFF;
   box-shadow: 0px 18.36px 18.36px -13.26px rgba(137, 180, 204, 0.5);
+  transform: scale(1.05);
 }
 .variables-block .content .examples .example:hover .image-block .img-container .example-info {
   left: 0;
@@ -822,6 +823,87 @@ body {
 .variables-block .content .examples .example .info-block button:hover {
   border-radius: 25px;
   background: linear-gradient(270deg, #7BDFFF 0%, #01C2FF 25.5%, #01C2FF 50%, #01C2FF 75%, #7BDFFF 100%);
+}
+
+.footer {
+  padding: 30px 0 70px;
+  border-top: 1px solid #BED3D9;
+}
+.footer .content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+}
+@media (max-width: 570px) {
+  .footer .content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.footer .content .column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+@media (max-width: 570px) {
+  .footer .content .column {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.footer .content .column .contacts {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.footer .content .column .contacts .tel {
+  color: #232E31;
+  font-family: "UZ Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.footer .content .column .contacts .tel:hover {
+  color: #01C2FF;
+}
+.footer .content .column .contacts .social {
+  position: relative;
+  overflow: hidden;
+}
+.footer .content .column .contacts .social:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #fff;
+  transition: all 0.3s;
+  opacity: 0;
+  z-index: 1;
+  transform-origin: top left;
+  transform: skew(-45deg);
+}
+.footer .content .column .contacts .social:hover:before {
+  width: 180%;
+  left: 200%;
+  opacity: 1;
+}
+.footer .content .column span {
+  color: #232E31;
+  font-family: Raleway;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 18px */
+}
+@media (max-width: 570px) {
+  .footer .content .column span {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
