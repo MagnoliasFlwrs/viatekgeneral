@@ -127,11 +127,10 @@ body {
 .callback-modal {
   height: 100vh;
   display: flex;
-  padding: 50px 0 0 0;
+  padding: 30px 0 0 0;
   max-width: 500px;
   width: 100%;
   flex-direction: column;
-  gap: 26px;
   position: fixed;
   transition: right .5s linear, opacity .2s ease;
   top: 0;
@@ -227,6 +226,7 @@ body {
             font-weight: 400;
             line-height: 100%; /* 20px */
             text-transform: uppercase;
+
           }
         }
         textarea {
